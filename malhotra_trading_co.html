@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malhotra Trading Co.</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body {margin:0; font-family:'Roboto', sans-serif; background:#f9f9f9; color:#333;}
+header {background:linear-gradient(135deg,#2a9d8f,#264653); color:white; padding:60px 20px; text-align:center;}
+header h1 {margin:0; font-size:3rem;}
+header p {font-size:1.2rem; margin-top:10px;}
+nav {display:flex; justify-content:center; background:#264653; flex-wrap:wrap;}
+nav a {color:white; text-decoration:none; margin:15px 20px; font-weight:500; transition:0.3s;}
+nav a:hover {color:#e9c46a;}
+section {padding:60px 20px; max-width:1200px; margin:auto;}
+h2 {color:#264653; margin-bottom:30px; text-align:center;}
+.about, .services, .reviews, .certifications, .charts, .contact {background:white; margin:30px 0; border-radius:10px; padding:40px; box-shadow:0 4px 20px rgba(0,0,0,0.1);}
+.about p, .services p, .contact p {font-size:1rem; line-height:1.6;}
+.services .service-grid, .certifications .cert-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+.service, .cert {background:#2a9d8f; color:white; padding:25px; border-radius:10px; text-align:center; transition:0.3s;}
+.service:hover, .cert:hover {transform:translateY(-5px); background:#21867a;}
+.service h3, .cert h3 {margin-top:0;}
+.reviews {position:relative; overflow:hidden;}
+.review-slide {display:flex; transition:transform 0.5s ease-in-out;}
+.review {min-width:100%; padding:30px; box-sizing:border-box; text-align:center; background:#264653; color:white; border-radius:10px; margin:0 10px;}
+.review img {width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:15px;}
+.review p {font-size:1rem; line-height:1.6; max-width:600px; margin:auto;}
+.cert img {width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:15px;}
+.contact form {display:flex; flex-direction:column;}
+.contact input, .contact textarea {padding:15px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc; font-size:1rem; width:100%; box-sizing:border-box;}
+.contact button {padding:15px; border:none; border-radius:5px; background:#264653; color:white; font-size:1rem; cursor:pointer; transition:0.3s;}
+.contact button:hover {background:#2a9d8f;}
+footer {text-align:center; padding:30px 20px; background:#264653; color:white;}
+footer a {color:#e9c46a; text-decoration:none; margin:0 10px;}
+.charts canvas {max-width:100%; margin:auto; display:block;}
+@media(max-width:600px){header h1{font-size:2.2rem;}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Malhotra Trading Co.</h1>
+<p>Professional Trading Solutions | Stocks | Crypto | Commodities</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#reviews">Investor Reviews</a>
+<a href="#certifications">Certifications & Awards</a>
+<a href="#charts">Performance</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="about">
+<h2>About Us</h2>
+<p>Malhotra Trading Co. specializes in diversified trading strategies across stocks, crypto, and commodities. Government-certified and recognized with multiple industry awards, we focus on transparency, reliability, and empowering our investors with knowledge and insights. Our goal is to maximize investor potential with data-driven strategies and professional mentorship.</p>
+</section>
+
+<section id="services" class="services">
+<h2>Our Services</h2>
+<div class="service-grid">
+<div class="service"><h3>Stocks Trading</h3><p>Data-backed strategies for equities, tailored to market trends and investor goals.</p></div>
+<div class="service"><h3>Crypto Investments</h3><p>Expert analysis and insights to navigate the volatile cryptocurrency market safely.</p></div>
+<div class="service"><h3>Commodities</h3><p>Trading in gold, oil, and other commodities with precision and market understanding.</p></div>
+<div class="service"><h3>Mentorship</h3><p>Guidance for aspiring traders, sharing knowledge, strategies, and best practices.</p></div>
+</div>
+</section>
+
+<section id="reviews" class="reviews">
+<h2>Investor Reviews</h2>
+<div class="review-slide" id="reviewSlide">
+<div class="review"><img src="https://i.pravatar.cc/80?img=10" alt="Investor 1"><h3>Rohit Sharma</h3><p>"Malhotra Trading Co. helped me understand market strategies and grow my investments safely." <br>– Mumbai, India</p></div>
+<div class="review"><img src="https://i.pravatar.cc/80?img=11" alt="Investor 2"><h3>Priya Singh</h3><p>"Professional team with excellent guidance. I trust their insights completely." <br>– Delhi, India</p></div>
+<div class="review"><img src="https://i.pravatar.cc/80?img=12" alt="Investor 3"><h3>Amit Mehta</h3><p>"Reliable, knowledgeable, and transparent. A great partner for trading investments." <br>– Bengaluru, India</p></div>
+<div class="review"><img src="https://i.pravatar.cc/80?img=13" alt="Investor 4"><h3>Sneha Reddy</h3><p>"Their mentorship helped me grow confidence in trading and investing." <br>– Hyderabad, India</p></div>
+<div class="review"><img src="https://i.pravatar.cc/80?img=14" alt="Investor 5"><h3>Vikram Kapoor</h3><p>"Excellent performance and transparency. I highly recommend Malhotra Trading Co." <br>– Chennai, India</p></div>
+</div>
+</section>
+
+<section id="certifications" class="certifications">
+<h2>Certifications & Awards</h2>
+<div class="cert-grid">
+<div class="cert"><img src="https://via.placeholder.com/80" alt="Government Certified"><h3>Government Certified</h3><p>Officially recognized as a licensed trading company.</p></div>
+<div class="cert"><img src="https://via.placeholder.com/80" alt="Best Trading Award"><h3>Best Trading Award 2024</h3><p>Recognized for excellence in trading strategies and investor satisfaction.</p></div>
+<div class="cert"><img src="https://via.placeholder.com/80" alt="Top Investor Choice"><h3>Top Investor Choice</h3><p>Awarded by investors for outstanding performance and trustworthiness.</p></div>
+</div>
+</section>
+
+<section id="charts" class="charts">
+<h2>Performance Overview</h2>
+<canvas id="growthChart" height="200"></canvas>
+<canvas id="cryptoChart" height="200" style="margin-top:40px;"></canvas>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p>Interested in collaborating or learning more? Reach out to us today!</p>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+&copy; 2025 Malhotra Trading Co. | All Rights Reserved  
+<br>
+Follow us on Instagram: <a href="https://www.instagram.com/kavithamalhotraa?igsh=YzE2MXh2ampzcDFr&utm_source=qr" target="_blank">@kavithamalhotraa</a>
+</footer>
+
+<script>
+let slideIndex=0;const slides=document.getElementById('reviewSlide');const totalSlides=slides.children.length;
+function showSlide(){slideIndex++;if(slideIndex>=totalSlides)slideIndex=0;slides.style.transform=`translateX(-${slideIndex*100}%)`;}
+setInterval(showSlide,4000);
+
+const ctx1=document.getElementById('growthChart').getContext('2d');
+const growthChart=new Chart(ctx1,{type:'line',data:{labels:['Jan','Feb','Mar','Apr','May','Jun'],datasets:[{label:'Portfolio Growth (%)',data:[5,12,18,25,32,40],borderColor:'#2a9d8f',backgroundColor:'rgba(42,157,143,0.2)',fill:true,tension:0.4}]},
+options:{responsive:true,plugins:{legend:{display:true}}}});
+
+const ctx2=document.getElementById('cryptoChart').getContext('2d');
+const cryptoChart=new Chart(ctx2,{type:'bar',data:{labels:['BTC','ETH','XRP','LTC','ADA'],datasets:[{label:'Average ROI (%)',data:[45,38,30,28,22],backgroundColor:'#264653'}]},options:{responsive:true,plugins:{legend:{display:true}}}});
+</script>
+
+</body>
+</html>
